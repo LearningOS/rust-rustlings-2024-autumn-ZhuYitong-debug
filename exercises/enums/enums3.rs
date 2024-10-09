@@ -8,9 +8,11 @@
 // I AM NOT DONE
 
 enum Message {
-    // TODO: implement the message variant types based on their usage below
+    ChangeColor(i32, i32, i32),
+    Echo(String),
+    Move(Point),
+    Quit,
 }
-
 struct Point {
     x: u8,
     y: u8,
@@ -24,7 +26,7 @@ struct State {
 }
 
 impl State {
-    fn change_color(&mut self, color: (u8, u8, u8)) {
+    fn change_color(&mut self, color:(u8, u8, u8)) {
         self.color = color;
     }
 
@@ -43,6 +45,7 @@ impl State {
         // variants
         // Remember: When passing a tuple as a function argument, you'll need
         // extra parentheses: fn function((t, u, p, l, e))
+        
     }
 }
 
